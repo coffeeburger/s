@@ -1,6 +1,8 @@
 # s
 **Sum** or, **S**lightly **S**killful/**S**olid/**S**imple/**S**illy **S**hell **S**cript that **S**hall **S**ummation in an **S**-expre**SS**ion **S**tyle with **S**avvy. (**S**o many **S**'**s**!)
 
+![](./s.gif)
+
 # SYNOPSIS
 
 **s** \[list of numbers\] \
