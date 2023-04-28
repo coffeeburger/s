@@ -75,3 +75,7 @@ cat <<eof |s|s
 > eof
 # output: 42
 ```
+
+# REQUIREMENTS
+- gawk
+- bash
