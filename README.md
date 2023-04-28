@@ -1,5 +1,6 @@
 # s
-Sum or, Slightly Skillful/Solid/Simple/Silly Shell Script that Shall Summation in an S-expreSSion Style with Savvy (So many S's!)
+**Sum** or, **S**lightly **S**killful/**S**olid/**S**imple/**S**illy **S**hell **S**cript that **S**hall **S**ummation in an **S**-expre**SS**ion **S**tyle with **S**avvy. (**S**o many **S**'**s**!)
+
 
 # OPTIONS
 
