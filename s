@@ -45,7 +45,7 @@ do
     m|man) tmp=$(mktemp);
         awk '/MAN_START/,/MAN_END/{if (!/START|END/) print substr($0, 2)}' $0 >$tmp;
         man $tmp;
-        \rm tmp; exit 0 ;;
+        \rm $tmp; exit 0 ;;
 
     : )  usage; exit 0 ;;
     ? )  echo -e "\n  Option does not exist : $OPTARG\n"; usage;
