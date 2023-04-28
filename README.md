@@ -1,5 +1,6 @@
 # s
-**Sum** or, **S**lightly **S**killful/**S**olid/**S**imple/**S**illy **S**hell **S**cript that **S**hall **S**ummation in an **S**-expre**SS**ion **S**tyle with **S**avvy. (**S**o many **S**'**s**!)
+**Sum** or, **S**lightly **S**killful/**S**olid/**S**imple/**S**illy/(whatever) **S**hell **S**cript that **S**hall **S**ummation in an **S**-expre**SS**ion **S**tyle with **S**avvy. 
+(**S**o many **S**'**s**!)
 
 ![](./s.gif)
 
