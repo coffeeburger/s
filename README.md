@@ -1,6 +1,18 @@
 # s
 **Sum** or, **S**lightly **S**killful/**S**olid/**S**imple/**S**illy **S**hell **S**cript that **S**hall **S**ummation in an **S**-expre**SS**ion **S**tyle with **S**avvy. (**S**o many **S**'**s**!)
 
+# SYNOPSIS
+
+**s** \[list of numbers\] \
+**s** \[**-rv**\] \[**-h** *headertype*\] \[file \...\]
+
+# DESCRIPTION
+
+s performs one of the following:
+
+  - Sums the list of numbers given as arguments and outputs the result.
+  - Reads the specified file, or standard input if no file is specified, then prints a list of numbers summed vertically. 
+    When there is only one line of input, sums row-wise.
 
 # OPTIONS
 
