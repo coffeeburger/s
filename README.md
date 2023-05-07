@@ -18,6 +18,8 @@ s performs one of the following:
     When there is only one line of input, sums row-wise.
 
 # OPTIONS
+**-d** delimiter
+:   Specify the field delimiter.
 
 **-r**
 :   Sum by row instead of vertically.
