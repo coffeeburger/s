@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-__ScriptVersion="1.0"
+__ScriptVersion="1.1"
 
 E=$(printf '\033')
 S="${E}[1mS${E}[0m"
@@ -16,24 +16,27 @@ echo -e "
 Usage :  s [[list of numbers] | [options] [file ...]]
 
 Options:
--r       Sum by row instead of vertically.
--v       Print original input and summation result.
--h x|y   Specify a heading with the given argument(s).
-         x for the header row and y for the header column.
-         The specified header row or column is excluded from summation.
+-d delim  Specify the field delimiter.
+-r        Sum by row instead of vertically.
+-v        Print original input and summation result.
+-h x|y    Specify a heading with the given argument(s).
+          x for the header row and y for the header column.
+          The specified header row or column is excluded from summation.
 "
 }
 
 
+delim=""
 verbose=0
 row_wise=0
 start_line=1
 start_col=1
 
-while getopts ":h:rvm" opt
+while getopts ":d:h:rvm" opt
 do
   case $opt in
 
+    d  )  delim="-F$OPTARG" ;;
     h  )  case "$OPTARG" in
               x) ((start_line+=1)) ;;
               y) ((start_col+=1)) ;;
@@ -60,7 +63,7 @@ shift $(($OPTIND-1))
 # Sum rowwise                        : r   -> row_wise = 1
 # Output the original input as well  : v   -> verbose  = 1
 
-awk -vverbose=${verbose} -vrow_wise=${row_wise} -vstart_line=${start_line} -vstart_col=${start_col} '
+awk ${delim} -vverbose=${verbose} -vrow_wise=${row_wise} -vstart_line=${start_line} -vstart_col=${start_col} '
 BEGIN{
     dont_readfile = 0
     S_sum         = 0
@@ -137,7 +140,7 @@ END{
 #. ftr VB CB
 #. ftr VBI CBI
 #.\}
-#.TH "s" "1" "April 2023" "version 1.0" "General Commands Manual"
+#.TH "s" "1" "May 2023" "version 1.1" "General Commands Manual"
 #.hy
 #.SH NAME
 #.PP
@@ -167,13 +170,16 @@ END{
 #.PP
 #The following options are available (in the latter case):
 #.TP
-#-r
+#\f[B]-d\f[R] delimiter
+#Specify the field delimiter.
+#.TP
+#\f[B]-r\f[R]
 #Sum by row instead of vertically.
 #.TP
-#-v
+#\f[B]-v\f[R]
 #Print the original input and summation result.
 #.TP
-#-h x|y
+#\f[B]-h\f[R] x|y
 #Specifies a heading with the given arguments.
 #x for the header row and y for the header column.
 #The specified header row or column is excluded from summation.

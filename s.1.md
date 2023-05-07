@@ -1,6 +1,6 @@
 ---
-title: s(1) version 1.0 |General Commands Manual
-date: April 2023
+title: s(1) version 1.1 |General Commands Manual
+date: May 2023
 ---
 # NAME
 
@@ -22,6 +22,10 @@ s performs one of the following:
 # OPTIONS
 
 The following options are available (in the latter case):
+
+**-d** delimiter
+
+:   Specify the field delimiter.
 
 **-r**
 

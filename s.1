@@ -14,7 +14,7 @@
 . ftr VB CB
 . ftr VBI CBI
 .\}
-.TH "s" "1" "April 2023" "version 1.0" "General Commands Manual"
+.TH "s" "1" "May 2023" "version 1.1" "General Commands Manual"
 .hy
 .SH NAME
 .PP
@@ -44,13 +44,16 @@ When there is only one line of input, sums row-wise.
 .PP
 The following options are available (in the latter case):
 .TP
--r
+\f[B]-d\f[R] delimiter
+Specify the field delimiter.
+.TP
+\f[B]-r\f[R]
 Sum by row instead of vertically.
 .TP
--v
+\f[B]-v\f[R]
 Print the original input and summation result.
 .TP
--h x|y
+\f[B]-h\f[R] x|y
 Specifies a heading with the given arguments.
 x for the header row and y for the header column.
 The specified header row or column is excluded from summation.
